@@ -1,68 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SHIBE - Meme Rebellion</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <title>SHIBE 2049 | Meme Rebellion</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-    body { background: #0e0e0e; color: #fff; overflow-x: hidden; }
-    header { padding: 4rem 2rem 2rem; text-align: center; }
-    header h1 { font-size: 3rem; color: #ff552e; font-family: 'Orbitron', sans-serif; }
-    header p { max-width: 640px; margin: 1rem auto; color: #ccc; font-size: 1.1rem; }
-    .hero { display: flex; flex-direction: column; align-items: center; padding: 2rem; }
-    .hero img { width: 220px; border-radius: 12px; box-shadow: 0 0 30px rgba(255, 85, 46, 0.5); margin-bottom: 2rem; }
-    .cta a { background: #ff552e; color: #fff; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: 0.3s; }
-    .cta a:hover { background: #e0441e; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; padding: 3rem 2rem; }
-    .card { background: #1a1a1a; padding: 2rem; border-radius: 12px; text-align: center; box-shadow: 0 0 20px rgba(255,85,46,0.1); }
-    .card img { width: 64px; margin-bottom: 1rem; }
-    .card h3 { color: #ff552e; margin-bottom: 0.5rem; }
-    .card p { color: #aaa; font-size: 0.95rem; }
-    footer { text-align: center; padding: 2rem; font-size: 0.9rem; color: #777; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: #0f0f0f;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 4rem 1rem 2rem;
+    }
+
+    header img {
+      width: 120px;
+      margin-bottom: 1rem;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      color: #ff5733;
+    }
+
+    header p {
+      max-width: 640px;
+      margin: 1rem auto;
+      color: #bbb;
+    }
+
+    .cta {
+      margin-top: 2rem;
+    }
+
+    .cta a {
+      background: #ff5733;
+      color: #000;
+      text-decoration: none;
+      padding: 1rem 2rem;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .cta a:hover {
+      background: #e2441d;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 3rem 2rem;
+      background: #1a1a1a;
+    }
+
+    .feature {
+      background: #2a2a2a;
+      padding: 2rem;
+      border-radius: 12px;
+      width: 280px;
+      text-align: center;
+    }
+
+    .feature h3 {
+      color: #ff5733;
+      margin: 1rem 0 0.5rem;
+    }
+
+    .feature p {
+      color: #bbb;
+      font-size: 0.95rem;
+    }
+
+    .gallery {
+      padding: 3rem 2rem;
+    }
+
+    .gallery h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .meme-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+      max-width: 960px;
+      margin: auto;
+    }
+
+    .meme-grid img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+      transition: transform 0.3s;
+    }
+
+    .meme-grid img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 3rem 1rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
   </style>
 </head>
-<body>
 
+<body>
   <header>
+    <img src="public/assets/logo.SHIBE.png" alt="SHIBE Logo">
     <h1>SHIBE 2049</h1>
     <p>The AI-proof meme rebellion. Born from chaos. Made to be felt. No roadmap. No influencers. Just you and the meme.</p>
+    <div class="cta">
+      <a href="https://zora.co/collect/shibe" target="_blank">🚀 MINT YOUR MEME</a>
+    </div>
   </header>
 
-  <section class="hero">
-    <img src="logo.png" alt="Shibe Logo">
-    <div class="cta">
-      <a href="https://zora.co/collect/shibe">🚀 MINT YOUR MEME</a>
+  <section class="features">
+    <div class="feature">
+      <h3>🔥 90% Burn</h3>
+      <p>True scarcity. SHIBE supply has been scorched. Only believers remain.</p>
+    </div>
+    <div class="feature">
+      <h3>🛡️ AI Proof</h3>
+      <p>Crafted by the human soul. No AI can fake the feeling of SHIBE.</p>
+    </div>
+    <div class="feature">
+      <h3>🌐 Web3 Native</h3>
+      <p>Built onchain. Zora + Arbitrum. Full sovereignty. No middlemen.</p>
+    </div>
+    <div class="feature">
+      <h3>🗳️ CaptionDAO</h3>
+      <p>Vote with your meme. Decide the captions. Curate the future.</p>
     </div>
   </section>
 
-  <section class="grid">
-    <div class="card">
-      <img src="🔥.png" alt="Burn Icon">
-      <h3>90% Burn</h3>
-      <p>True scarcity. SHIBE supply has been scorched. Only believers remain.</p>
-    </div>
-    <div class="card">
-      <img src="🧠.png" alt="AI Proof">
-      <h3>AI Proof</h3>
-      <p>Crafted by the human soul. No AI can fake the feeling of SHIBE.</p>
-    </div>
-    <div class="card">
-      <img src="🌐.png" alt="Web3 Native">
-      <h3>Web3 Native</h3>
-      <p>Built onchain. Zora + Arbitrum. Full sovereignty. No middlemen.</p>
-    </div>
-    <div class="card">
-      <img src="🗳️.png" alt="DAO Meme Vote">
-      <h3>CaptionDAO</h3>
-      <p>Vote with your meme. Decide the captions, curate the future.</p>
+  <section class="gallery">
+    <h2>Trending SHIBE Memes</h2>
+    <div class="meme-grid">
+      <img src="public/assets/publicassetsmeme1.webp" alt="Meme 1">
+      <img src="public/assets/publicassetsmeme2.webp" alt="Meme 2">
+      <img src="public/assets/publicassetsmeme3.webp" alt="Meme 3">
+      <img src="public/assets/publicassetsmeme4.webp" alt="Meme 4">
+      <img src="public/assets/publicassetsmeme5.webp" alt="Meme 5">
     </div>
   </section>
 
   <footer>
     &copy; 2049 SHIBE DAO. Memes are memories.
   </footer>
-
 </body>
+
 </html>
