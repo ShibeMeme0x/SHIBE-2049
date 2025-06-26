@@ -162,62 +162,65 @@
 </body>
 
 </html>
-<!-- PARTNER & SOCIAL SECTION -->
-<section class="partners-social">
+<!-- PARTNER & SOCIAL FOOTER -->
+<section class="shibe-footer">
   <div class="marquee">
-    <span>🪙 Partners: CoinMarketCap • CoinGecko • Uniswap • Binance • OKX • MEXC • Gate.io • Bybit • Arbitrum • Zora • Mirror.xyz</span>
+    <span>🌐 PARTNER: CoinMarketCap • CoinGecko • DexTools | 🔁 DEX: Uniswap • SushiSwap • PancakeSwap • Raydium • DODO</span>
   </div>
 
-  <div class="social-links">
-    <a href="https://facebook.com" target="_blank">Facebook</a>
-    <a href="https://youtube.com" target="_blank">YouTube</a>
-    <a href="https://t.me/shibe" target="_blank">Telegram</a>
-    <a href="https://x.com/shibe" target="_blank">X</a>
-    <a href="https://tiktok.com/@shibe" target="_blank">TikTok</a>
+  <div class="social-icons">
+    <a href="https://x.com/shibe" target="_blank" title="X">X</a>
+    <a href="https://t.me/shibe" target="_blank" title="Telegram">Telegram</a>
+    <a href="https://discord.gg/shibe" target="_blank" title="Discord">Discord</a>
+    <a href="https://reddit.com/r/shibe" target="_blank" title="Reddit">Reddit</a>
+    <a href="https://tiktok.com/@shibe" target="_blank" title="TikTok">TikTok</a>
+    <a href="https://youtube.com/@shibe" target="_blank" title="YouTube">YouTube</a>
+    <a href="https://facebook.com/shibe" target="_blank" title="Facebook">Facebook</a>
   </div>
 </section>
 
 <style>
-  .partners-social {
+  .shibe-footer {
+    padding: 1.5rem 1rem;
     background: #111;
-    padding: 1rem 0;
-    text-align: center;
+    color: #fff;
     font-family: sans-serif;
+    text-align: center;
   }
 
   .marquee {
-    overflow: hidden;
-    white-space: nowrap;
-    color: gold;
-    font-weight: bold;
     font-size: 1rem;
-    animation: scroll 25s linear infinite;
+    font-weight: bold;
+    color: gold;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: scroll-left 18s linear infinite;
+    margin-bottom: 1rem;
   }
 
-  @keyframes scroll {
+  @keyframes scroll-left {
     0% { transform: translateX(100%); }
     100% { transform: translateX(-100%); }
   }
 
-  .social-links {
-    margin-top: 0.8rem;
+  .social-icons {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 1rem;
+    justify-content: center;
+    gap: 0.6rem;
   }
 
-  .social-links a {
-    color: #fff;
+  .social-icons a {
+    padding: 0.5rem 0.8rem;
     background: #222;
-    padding: 0.4rem 0.8rem;
-    border-radius: 6px;
+    color: #fff;
     text-decoration: none;
-    transition: background 0.2s;
+    border-radius: 5px;
     font-size: 0.9rem;
+    transition: all 0.2s;
   }
 
-  .social-links a:hover {
-    background: #444;
+  .social-icons a:hover {
+    background: #555;
   }
 </style>
