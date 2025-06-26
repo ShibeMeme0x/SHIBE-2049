@@ -85,6 +85,64 @@
       font-size: 0.9rem;
       color: #666;
     }
+
+    /* PARTNER & SOCIAL STYLES */
+    .shibe-footer {
+      margin-top: 3rem;
+      padding: 2rem 1rem;
+      background: #000;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      text-align: center;
+      border-top: 1px solid #222;
+    }
+
+    .marquee-logos {
+      overflow: hidden;
+      white-space: nowrap;
+      margin-bottom: 1rem;
+    }
+
+    .logo-wrap {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      animation: scroll-left 25s linear infinite;
+    }
+
+    .logo-wrap img {
+      vertical-align: middle;
+      background: #fff;
+      border-radius: 6px;
+      padding: 4px;
+    }
+
+    @keyframes scroll-left {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 1rem;
+    }
+
+    .social-icons a {
+      background: #222;
+      color: #fff;
+      padding: 0.5rem 0.8rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: background 0.2s;
+    }
+
+    .social-icons a:hover {
+      background: #444;
+    }
   </style>
 </head>
 
@@ -141,6 +199,26 @@
     <p><i>Each burn is a ritual. Each token keeps a piece of SHIBE’s soul.</i></p>
   </div>
 
+  <!-- ✅ PARTNER BAR + SOCIAL -->
+  <section class="shibe-footer">
+    <div class="marquee-logos">
+      <div class="logo-wrap">
+        <img src="https://s2.coinmarketcap.com/static/cloud/img/coinmarketcap_white_1.svg" alt="CoinMarketCap" height="28" />
+        <img src="https://assets.coingecko.com/markets/images/1/small/coingecko.png" alt="CoinGecko" height="28" />
+        <span>• DexTools • Uniswap • SushiSwap • PancakeSwap • Raydium • DODO</span>
+      </div>
+    </div>
+    <div class="social-icons">
+      <a href="https://x.com/shibe" target="_blank" title="X">X</a>
+      <a href="https://t.me/shibe" target="_blank" title="Telegram">Telegram</a>
+      <a href="https://discord.gg/shibe" target="_blank" title="Discord">Discord</a>
+      <a href="https://reddit.com/r/shibe" target="_blank" title="Reddit">Reddit</a>
+      <a href="https://tiktok.com/@shibe" target="_blank" title="TikTok">TikTok</a>
+      <a href="https://youtube.com/@shibe" target="_blank" title="YouTube">YouTube</a>
+      <a href="https://facebook.com/shibe" target="_blank" title="Facebook">Facebook</a>
+    </div>
+  </section>
+
   <footer>
     © 2049 SHIBE DAO. Memes are memories.
   </footer>
@@ -160,67 +238,4 @@
     }
   </script>
 </body>
-
 </html>
-<!-- PARTNER & SOCIAL FOOTER -->
-<section class="shibe-footer">
-  <div class="marquee">
-    <span>🌐 PARTNER: CoinMarketCap • CoinGecko • DexTools | 🔁 DEX: Uniswap • SushiSwap • PancakeSwap • Raydium • DODO</span>
-  </div>
-
-  <div class="social-icons">
-    <a href="https://x.com/shibe" target="_blank" title="X">X</a>
-    <a href="https://t.me/shibe" target="_blank" title="Telegram">Telegram</a>
-    <a href="https://discord.gg/shibe" target="_blank" title="Discord">Discord</a>
-    <a href="https://reddit.com/r/shibe" target="_blank" title="Reddit">Reddit</a>
-    <a href="https://tiktok.com/@shibe" target="_blank" title="TikTok">TikTok</a>
-    <a href="https://youtube.com/@shibe" target="_blank" title="YouTube">YouTube</a>
-    <a href="https://facebook.com/shibe" target="_blank" title="Facebook">Facebook</a>
-  </div>
-</section>
-
-<style>
-  .shibe-footer {
-    padding: 1.5rem 1rem;
-    background: #111;
-    color: #fff;
-    font-family: sans-serif;
-    text-align: center;
-  }
-
-  .marquee {
-    font-size: 1rem;
-    font-weight: bold;
-    color: gold;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: scroll-left 18s linear infinite;
-    margin-bottom: 1rem;
-  }
-
-  @keyframes scroll-left {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
-  }
-
-  .social-icons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.6rem;
-  }
-
-  .social-icons a {
-    padding: 0.5rem 0.8rem;
-    background: #222;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    transition: all 0.2s;
-  }
-
-  .social-icons a:hover {
-    background: #555;
-  }
-</style>
