@@ -121,4 +121,38 @@
 
     <h2>6. TOKENOMICS | Burn to Keep the Soul</h2>
     <ul>
-      <li>
+      <li>Total Supply: 4,206,942,006,942,069 SHIBE</li>
+      <li>Burned Forever: 89.999%</li>
+      <li>Remaining:</li>
+      <ul>
+        <li>Seed: 2%</li>
+        <li>IDO: 4%</li>
+        <li>Private: 2%</li>
+        <li>Team: 1%</li>
+        <li>Airdrop + DAO: 1%</li>
+      </ul>
+    </ul>
+    <p><em>Each burn is a ritual. Each token keeps a piece of SHIBE’s soul.</em></p>
+  </section>
+
+  <footer>
+    &copy; 2049 SHIBE DAO. Memes are memories.
+  </footer>
+
+  <script>
+    async function connectWallet() {
+      if (window.ethereum) {
+        try {
+          const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+          alert('Wallet connected: ' + accounts[0]);
+        } catch (err) {
+          alert('Connection rejected.');
+        }
+      } else {
+        alert('MetaMask not detected');
+      }
+    }
+  </script>
+</body>
+
+</html>
