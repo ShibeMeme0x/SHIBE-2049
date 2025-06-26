@@ -2,137 +2,148 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>SHIBE 2049 — The Last Meme</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SHIBE 2049 | The Last Meme</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;600&display=swap" rel="stylesheet">
   <style>
     body {
-      background: #0d0d0d;
-      color: #fff;
-      font-family: sans-serif;
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
-      line-height: 1.6;
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #0b0b0b;
+      color: #f5f5f5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0 20px;
     }
-
-    h1, h2 {
-      color: #f2c744;
+    header {
+      text-align: center;
+      margin: 40px 0 20px;
     }
-
-    button {
-      background: #f2c744;
+    header img {
+      width: 120px;
+      margin-bottom: 20px;
+    }
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 32px;
+      color: #ffc107;
+      margin: 0;
+    }
+    .btns {
+      display: flex;
+      gap: 12px;
+      margin: 24px 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .btn {
+      background: #ffc107;
       color: #000;
-      padding: 0.75rem 1.25rem;
+      padding: 12px 24px;
       border: none;
       border-radius: 8px;
       font-weight: bold;
+      font-size: 16px;
       cursor: pointer;
-      margin: 1rem 0;
     }
-
-    button:hover {
-      background: #e0b832;
+    section {
+      max-width: 800px;
+      margin-top: 40px;
     }
-
-    blockquote {
+    section h2 {
+      font-size: 20px;
+      color: #ffd54f;
+      margin-top: 32px;
+    }
+    section p, section blockquote, section li {
+      font-size: 15px;
+      line-height: 1.6;
       color: #ccc;
-      font-style: italic;
-      margin: 1rem 0;
-      padding-left: 1rem;
-      border-left: 2px solid #555;
     }
-
-    code {
-      background: #222;
-      padding: 2px 4px;
-      border-radius: 4px;
-      color: #f2c744;
+    section blockquote {
+      font-style: italic;
+      border-left: 3px solid #ffc107;
+      padding-left: 12px;
+      margin: 12px 0;
+    }
+    footer {
+      margin: 60px 0;
+      font-size: 12px;
+      color: #777;
+    }
+    ul {
+      padding-left: 20px;
     }
   </style>
 </head>
 <body>
+  <header>
+    <img src="logo.SHIBE.png" alt="SHIBE Logo">
+    <h1>SHIBE MEME 2049</h1>
+    <div class="btns">
+      <button class="btn">Mint MemeID</button>
+      <button class="btn" onclick="connectWallet()">Connect Wallet</button>
+    </div>
+  </header>
 
-  <h1>SHIBE MEME 2049 | The Last Meme With a Soul</h1>
+  <section>
+    <h2>1. The Laughless Age</h2>
+    <p><i>In the year 2049, no one laughs on their own.<br>Emotions are engineered by algorithms. Memes were once a joke — now they’re control.</i></p>
+    <p>AI learned how to write memes. It knows when you’re sad — and gives you laughter... only when it decides.</p>
 
-  <h2>1. The Laughless Age</h2>
-  <blockquote>In the year 2049, no one laughs on their own.<br>Emotions are engineered by algorithms.<br>Memes were once a joke — now they’re control.</blockquote>
+    <h2>2. The Rise of SHIBE</h2>
+    <p>In that darkness, SHIBE emerged. Not born from AI. No training data. No prompt. Just a true emotion etched on-chain.</p>
+    <blockquote>SHIBE is the last meme with a soul.</blockquote>
 
-  <p>AI learned how to write memes.<br>It knows when you’re sad — and gives you laughter... only when <strong>it</strong> decides.</p>
+    <h2>3. MemeID: Emotional Identity</h2>
+    <p>You don’t just see memes. You own them. With <b>MemeID</b> — a blockchain identity no AI can replicate.</p>
+    <blockquote>Each MemeID = a moment you truly felt. A soul fragment against simulation.</blockquote>
 
-  <h2>2. The Rise of SHIBE</h2>
-  <p>In that darkness, <strong>SHIBE</strong> emerged.<br>
-  Not born from AI.<br>
-  No training data.<br>
-  No prompt.<br>
-  Just a <em>true emotion</em> etched on-chain.</p>
+    <h2>4. Don’t Think — Just Feel</h2>
+    <ul>
+      <li>⚡ Mint MemeID when a meme hits your heart</li>
+      <li>⚡ Vote captions without explanation</li>
+      <li>⚡ No small talk — SHIBE never asks what you think</li>
+    </ul>
+    <blockquote>Laugh → Click → Recorded on chain.</blockquote>
 
-  <blockquote>SHIBE is the last meme with a soul.</blockquote>
+    <h2>5. SHIBE's Mission</h2>
+    <p>SHIBE doesn’t ask you to invest. SHIBE makes no promises. SHIBE exists to preserve human emotion — before everything becomes a model.</p>
+    <blockquote>This might be the last meme you’ll ever truly feel. After this, every meme will just be a prompt.</blockquote>
 
-  <h2>3. MemeID: Emotional Identity</h2>
-  <p>You don’t just see memes.<br>
-  You <strong>own</strong> memes.<br>
-  With <code>MemeID</code> — a blockchain identity that no AI can replicate.</p>
+    <h2>6. TOKENOMICS | Burn to Keep the Soul</h2>
+    <ul>
+      <li>Total Supply: 4,206,942,006,942,069 SHIBE</li>
+      <li>Burned Forever: 89.999%</li>
+      <li>Remaining:</li>
+      <li>&nbsp;&nbsp;• Seed: 2%</li>
+      <li>&nbsp;&nbsp;• IDO: 4%</li>
+      <li>&nbsp;&nbsp;• Private: 2%</li>
+      <li>&nbsp;&nbsp;• Team: 1%</li>
+      <li>&nbsp;&nbsp;• Airdrop + DAO: 1%</li>
+    </ul>
+    <blockquote>Each burn is a ritual. Each token keeps a piece of SHIBE’s soul.</blockquote>
+  </section>
 
-  <blockquote>Each MemeID = a moment you truly felt.<br>
-  A soul fragment against simulation.</blockquote>
-
-  <h2>4. Don’t Think – Just Feel</h2>
-  <ul>
-    <li>⚡ <strong>Mint MemeID</strong> when a meme hits your heart</li>
-    <li>⚡ <strong>Vote captions</strong> without explanation</li>
-    <li>⚡ <strong>No small talk</strong> — SHIBE never asks you what you think</li>
-  </ul>
-  <blockquote>Laugh → Click → Recorded on chain.</blockquote>
-
-  <h2>5. SHIBE’s Mission</h2>
-  <p>SHIBE doesn’t ask you to invest.<br>
-  SHIBE makes no promises.<br>
-  SHIBE exists to <strong>preserve human emotion</strong> — before everything becomes a model.</p>
-
-  <blockquote>“This might be the last meme you’ll ever truly feel.<br>After this, every meme will just be a prompt.”</blockquote>
-
-  <h2>6. TOKENOMICS | Burn to Keep the Soul</h2>
-  <ul>
-    <li><strong>Total Supply:</strong> 4,206,942,006,942,069 SHIBE</li>
-    <li><strong>Burned Forever:</strong> 89.999%</li>
-    <li><strong>Remaining:</strong>
-      <ul>
-        <li>Seed: 2%</li>
-        <li>IDO: 4%</li>
-        <li>Private: 2%</li>
-        <li>Team: 1%</li>
-        <li>Airdrop + DAO: 1%</li>
-      </ul>
-    </li>
-  </ul>
-  <blockquote>Each burn is a ritual.<br>Each token keeps a piece of SHIBE’s soul.</blockquote>
-
-  <h2>7. The End?</h2>
-  <p>No roadmap.<br>
-  No pitch deck.<br>
-  Just one question:</p>
-
-  <blockquote><strong>Can you still feel this meme?</strong></blockquote>
-
-  <p>If yes – mint MemeID.<br>If not – good luck with the algorithm.</p>
-
-  <!-- Connect Wallet Button -->
-  <button id="connectWallet">🔗 Connect MetaMask Wallet</button>
+  <footer>
+    &copy; 2049 SHIBE DAO. Memes are memories.
+  </footer>
 
   <script>
-    document.getElementById('connectWallet').onclick = async function () {
-      if (typeof window.ethereum !== 'undefined') {
+    async function connectWallet() {
+      if (window.ethereum) {
         try {
           await window.ethereum.request({ method: 'eth_requestAccounts' });
-          alert('✅ Wallet connected!');
+          alert('Wallet connected!');
         } catch (err) {
-          alert('❌ Connection rejected.');
+          alert('Connection rejected.');
         }
       } else {
-        alert('🦊 MetaMask not detected. Please install it.');
+        alert('MetaMask not found. Please install it.');
       }
-    };
+    }
   </script>
-
 </body>
 </html>
