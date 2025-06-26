@@ -1,131 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SHIBE MEME 2049</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
   <style>
-    body {
+    * {
       margin: 0;
-      background: #0d0d0d;
+      padding: 0;
+      box-sizing: border-box;
       font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: #0f0f0f;
       color: #f1f1f1;
       text-align: center;
-    }
-    header {
       padding: 2rem 1rem;
     }
-    .logo {
-      width: 100px;
-      border-radius: 50%;
-      box-shadow: 0 0 15px #f2c744;
-    }
-    h1 {
+
+    h1, h2 {
       color: #f2c744;
-      margin-top: 1rem;
     }
+
     .btn-group {
-      margin: 1rem 0;
+      margin: 1.5rem auto;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
     }
+
     .btn-group button {
       background: #f2c744;
       border: none;
       padding: 0.8rem 1.6rem;
-      margin: 0 0.5rem;
-      border-radius: 8px;
       font-weight: bold;
+      border-radius: 8px;
       cursor: pointer;
     }
-    .memes {
+
+    .btn-group button:hover {
+      background: #e0b832;
+    }
+
+    .meme-slider {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      overflow-x: auto;
       gap: 1rem;
       padding: 1rem;
+      justify-content: center;
+      margin-bottom: 2rem;
     }
-    .memes img {
-      width: 160px;
+
+    .meme-slider img {
+      height: 140px;
       border-radius: 12px;
-      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
       transition: transform 0.3s;
     }
-    .memes img:hover {
-      transform: scale(1.05);
+
+    .meme-slider img:hover {
+      transform: scale(1.08);
     }
-    .content, .inspired {
+
+    .section {
       max-width: 800px;
       margin: 2rem auto;
-      padding: 0 1rem;
       text-align: left;
+      line-height: 1.8;
     }
-    .content h2, .inspired h2 {
-      color: #f2c744;
+
+    .section h2 {
       margin-top: 2rem;
+      margin-bottom: 0.5rem;
     }
-    .inspired ul {
-      list-style: none;
-      padding: 0;
+
+    ul {
+      padding-left: 1.2rem;
     }
-    .inspired li {
-      padding: 0.5rem 0;
-    }
-    .inspired a {
-      color: #79c7ff;
-      text-decoration: none;
-    }
+
     footer {
-      margin-top: 3rem;
-      padding: 2rem;
+      margin-top: 4rem;
       background: #111;
-      font-size: 0.85rem;
-      color: #999;
+      padding: 1.5rem;
+      color: #aaa;
+    }
+
+    .social-icons a {
+      margin: 0 6px;
+      text-decoration: none;
+      color: #fff;
+      background: #222;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      font-size: 0.9rem;
     }
   </style>
 </head>
-<body>
-  <header>
-    <img src="logo.SHIBE.png" class="logo" alt="SHIBE Logo">
-    <h1>SHIBE MEME 2049</h1>
-    <div class="btn-group">
-      <button onclick="alert('Minting...')">Mint MemeID</button>
-      <button onclick="connectWallet()">Connect Wallet</button>
-    </div>
-  </header>
 
-  <section class="memes">
+<body>
+  <img src="logo.SHIBE.png" alt="Shibe Logo" style="width: 100px; border-radius: 50%;" />
+  <h1>SHIBE MEME 2049</h1>
+  <div class="btn-group">
+    <button onclick="alert('Minting...')">Mint MemeID</button>
+    <button onclick="connectWallet()">Connect Wallet</button>
+  </div>
+
+  <div class="meme-slider">
     <img src="publicassetsmeme1.webp" alt="Meme 1">
     <img src="publicassetsmeme2.webp" alt="Meme 2">
     <img src="publicassetsmeme3.webp" alt="Meme 3">
     <img src="publicassetsmeme4.webp" alt="Meme 4">
     <img src="publicassetsmeme5.webp" alt="Meme 5">
-  </section>
+  </div>
 
-  <section class="content">
+  <div class="section">
     <h2>1. The Laughless Age</h2>
-    <p><i>In 2049, laughter is gone. Emotions are controlled by AI.</i> SHIBE is the rebellion of the last human meme.</p>
-    <h2>2. MemeID: Soul Identity</h2>
-    <p>Each MemeID is a moment you felt real. It’s yours, on-chain — no AI can fake that.</p>
-    <h2>3. Tokenomics</h2>
-    <p><b>Total:</b> 4,206,942,006,942,069 SHIBE | <b>Burned:</b> 89.999%<br>
-    Seed: 2%, IDO: 4%, Private: 2%, Team: 1%, DAO+Drop: 1%</p>
-  </section>
+    <p>In 2049, no one laughs alone. SHIBE is the rebellion of the last human meme. Memes became tools, SHIBE is soul.</p>
 
-  <section class="inspired">
+    <h2>2. MemeID: Soul Identity</h2>
+    <p>Each MemeID = a moment you truly felt. It's yours, on-chain — no AI can fake that.</p>
+
+    <h2>3. Tokenomics</h2>
+    <p><b>Total:</b> 4,206,942,006,942,069 | <b>Burned:</b> 89.999%<br>
+      Seed: 2%, IDO: 4%, Private: 2%, Team: 1%, DAO/Airdrop: 1%</p>
+
     <h2>Inspired by Meme Culture</h2>
     <ul>
-      <li><a href="https://knowyourmeme.com" target="_blank">Know Your Meme</a> — the meme encyclopedia</li>
-      <li><a href="https://cheezburger.com" target="_blank">Cheezburger</a> — OG meme platform</li>
-      <li><a href="https://9gag.com" target="_blank">9GAG</a> — global meme trendsetters</li>
-      <li><a href="https://www.reddit.com/r/memes" target="_blank">Reddit r/memes</a> — massive meme community</li>
-      <li><a href="https://dankland.xyz" target="_blank">Dankland</a> — Web3 meme tokens & NFTs</li>
+      <li><a href="https://knowyourmeme.com" target="_blank">Know Your Meme</a></li>
+      <li><a href="https://cheezburger.com" target="_blank">Cheezburger</a></li>
+      <li><a href="https://9gag.com" target="_blank">9GAG</a></li>
+      <li><a href="https://reddit.com/r/memes" target="_blank">Reddit – r/memes</a></li>
+      <li><a href="https://dankland.xyz" target="_blank">Dankland</a></li>
     </ul>
-  </section>
+  </div>
 
   <footer>
-    Inspired by Meme Culture | Partners: CoinMarketCap, CoinGecko, Uniswap, PancakeSwap, DEXTools<br>
-    Connect: X, Telegram, Discord, TikTok, YouTube, Facebook.<br>
-    © 2049 SHIBE DAO
+    <div>
+      Connect: <span class="social-icons">
+        <a href="#">X</a>
+        <a href="#">Telegram</a>
+        <a href="#">Discord</a>
+        <a href="#">Reddit</a>
+        <a href="#">TikTok</a>
+        <a href="#">YouTube</a>
+        <a href="#">Facebook</a>
+      </span>
+    </div>
+    <div style="margin-top:1rem; font-size:0.8rem;">
+      Inspired by Meme Culture | Partners: CoinMarketCap, CoinGecko, DexTools | DEX: Uniswap, PancakeSwap, SushiSwap, Raydium
+    </div>
+    <p style="margin-top:1rem">&copy; 2049 SHIBE DAO</p>
   </footer>
 
   <script>
@@ -143,4 +171,5 @@
     }
   </script>
 </body>
+
 </html>
