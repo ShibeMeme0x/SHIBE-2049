@@ -1,226 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SHIBE MEME 2049</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
-
     body {
-      background: #0f0f0f;
+      margin: 0;
+      background: #0d0d0d;
+      font-family: 'Inter', sans-serif;
       color: #f1f1f1;
       text-align: center;
+    }
+    header {
       padding: 2rem 1rem;
     }
-
+    .logo {
+      width: 100px;
+      border-radius: 50%;
+      box-shadow: 0 0 15px #f2c744;
+    }
     h1 {
       color: #f2c744;
-      margin-bottom: 1rem;
+      margin-top: 1rem;
     }
-
     .btn-group {
-      margin: 1rem auto 2rem;
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
+      margin: 1rem 0;
     }
-
     .btn-group button {
       background: #f2c744;
       border: none;
       padding: 0.8rem 1.6rem;
-      font-weight: bold;
+      margin: 0 0.5rem;
       border-radius: 8px;
+      font-weight: bold;
       cursor: pointer;
     }
-
-    .btn-group button:hover {
-      background: #e0b832;
-    }
-
     .memes {
-      margin: 2rem auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 1rem;
-      max-width: 960px;
+      padding: 1rem;
     }
-
     .memes img {
-      width: 100%;
+      width: 160px;
       border-radius: 12px;
-      box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
       transition: transform 0.3s;
     }
-
     .memes img:hover {
       transform: scale(1.05);
     }
-
-    .content {
+    .content, .inspired {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
       text-align: left;
-      max-width: 700px;
-      margin: auto;
-      padding: 2rem 1rem;
-      color: #ddd;
-      line-height: 1.7;
     }
-
-    .content h2 {
+    .content h2, .inspired h2 {
       color: #f2c744;
       margin-top: 2rem;
     }
-
-    footer {
-      margin-top: 4rem;
-      font-size: 0.9rem;
-      color: #666;
+    .inspired ul {
+      list-style: none;
+      padding: 0;
     }
-
-    /* PARTNER & SOCIAL STYLES */
-    .shibe-footer {
-      margin-top: 3rem;
-      padding: 2rem 1rem;
-      background: #000;
-      color: #fff;
-      font-family: 'Inter', sans-serif;
-      text-align: center;
-      border-top: 1px solid #222;
+    .inspired li {
+      padding: 0.5rem 0;
     }
-
-    .marquee-logos {
-      overflow: hidden;
-      white-space: nowrap;
-      margin-bottom: 1rem;
-    }
-
-    .logo-wrap {
-      display: inline-flex;
-      align-items: center;
-      gap: 1rem;
-      animation: scroll-left 25s linear infinite;
-    }
-
-    .logo-wrap img {
-      vertical-align: middle;
-      background: #fff;
-      border-radius: 6px;
-      padding: 4px;
-    }
-
-    @keyframes scroll-left {
-      0% { transform: translateX(100%); }
-      100% { transform: translateX(-100%); }
-    }
-
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-      margin-top: 1rem;
-    }
-
-    .social-icons a {
-      background: #222;
-      color: #fff;
-      padding: 0.5rem 0.8rem;
-      border-radius: 5px;
+    .inspired a {
+      color: #79c7ff;
       text-decoration: none;
-      font-size: 0.9rem;
-      transition: background 0.2s;
     }
-
-    .social-icons a:hover {
-      background: #444;
+    footer {
+      margin-top: 3rem;
+      padding: 2rem;
+      background: #111;
+      font-size: 0.85rem;
+      color: #999;
     }
   </style>
 </head>
-
 <body>
-  <img src="logo.SHIBE.png" alt="Shibe Logo" style="width: 120px; border-radius: 50%; box-shadow: 0 0 20px #f2c744;">
-  <h1>SHIBE MEME 2049</h1>
-  <div class="btn-group">
-    <button onclick="alert('Minting...')">Mint MemeID</button>
-    <button onclick="connectWallet()">Connect Wallet</button>
-  </div>
+  <header>
+    <img src="logo.SHIBE.png" class="logo" alt="SHIBE Logo">
+    <h1>SHIBE MEME 2049</h1>
+    <div class="btn-group">
+      <button onclick="alert('Minting...')">Mint MemeID</button>
+      <button onclick="connectWallet()">Connect Wallet</button>
+    </div>
+  </header>
 
-  <h3 style="color: #f2c744;">🔥 Trending SHIBE Memes</h3>
-  <div class="memes">
+  <section class="memes">
     <img src="publicassetsmeme1.webp" alt="Meme 1">
     <img src="publicassetsmeme2.webp" alt="Meme 2">
     <img src="publicassetsmeme3.webp" alt="Meme 3">
     <img src="publicassetsmeme4.webp" alt="Meme 4">
     <img src="publicassetsmeme5.webp" alt="Meme 5">
-  </div>
+  </section>
 
-  <div class="content">
+  <section class="content">
     <h2>1. The Laughless Age</h2>
-    <p><i>In the year 2049, no one laughs on their own. Emotions are engineered by algorithms. Memes were once a joke — now they’re control.</i></p>
-    <p>AI learned how to write memes. It knows when you’re sad — and gives you laughter... only when it decides.</p>
+    <p><i>In 2049, laughter is gone. Emotions are controlled by AI.</i> SHIBE is the rebellion of the last human meme.</p>
+    <h2>2. MemeID: Soul Identity</h2>
+    <p>Each MemeID is a moment you felt real. It’s yours, on-chain — no AI can fake that.</p>
+    <h2>3. Tokenomics</h2>
+    <p><b>Total:</b> 4,206,942,006,942,069 SHIBE | <b>Burned:</b> 89.999%<br>
+    Seed: 2%, IDO: 4%, Private: 2%, Team: 1%, DAO+Drop: 1%</p>
+  </section>
 
-    <h2>2. The Rise of SHIBE</h2>
-    <p>In that darkness, SHIBE emerged. Not born from AI. No training data. No prompt. Just a true emotion etched on-chain.<br><i>SHIBE is the last meme with a soul.</i></p>
-
-    <h2>3. MemeID: Emotional Identity</h2>
-    <p>You don’t just see memes. You own them. With <b>MemeID</b> — a blockchain identity no AI can replicate.<br><i>Each MemeID = a moment you truly felt. A soul fragment against simulation.</i></p>
-
-    <h2>4. Don’t Think — Just Feel</h2>
+  <section class="inspired">
+    <h2>Inspired by Meme Culture</h2>
     <ul>
-      <li>⚡ Mint MemeID when a meme hits your heart</li>
-      <li>⚡ Vote captions without explanation</li>
-      <li>⚡ No small talk — SHIBE never asks what you think</li>
+      <li><a href="https://knowyourmeme.com" target="_blank">Know Your Meme</a> — the meme encyclopedia</li>
+      <li><a href="https://cheezburger.com" target="_blank">Cheezburger</a> — OG meme platform</li>
+      <li><a href="https://9gag.com" target="_blank">9GAG</a> — global meme trendsetters</li>
+      <li><a href="https://www.reddit.com/r/memes" target="_blank">Reddit r/memes</a> — massive meme community</li>
+      <li><a href="https://dankland.xyz" target="_blank">Dankland</a> — Web3 meme tokens & NFTs</li>
     </ul>
-    <p><i>Laugh → Click → Recorded on chain.</i></p>
-
-    <h2>5. SHIBE’s Mission</h2>
-    <p>SHIBE doesn’t ask you to invest. SHIBE makes no promises. SHIBE exists to preserve human emotion — before everything becomes a model.<br><i>“This might be the last meme you’ll ever truly feel. After this, every meme will just be a prompt.”</i></p>
-
-    <h2>6. TOKENOMICS | Burn to Keep the Soul</h2>
-    <ul>
-      <li><b>Total Supply:</b> 4,206,942,006,942,069 SHIBE</li>
-      <li><b>Burned Forever:</b> 89.999%</li>
-      <li><b>Remaining:</b></li>
-      <li>- Seed: 2%</li>
-      <li>- IDO: 4%</li>
-      <li>- Private: 2%</li>
-      <li>- Team: 1%</li>
-      <li>- Airdrop + DAO: 1%</li>
-    </ul>
-    <p><i>Each burn is a ritual. Each token keeps a piece of SHIBE’s soul.</i></p>
-  </div>
-
-  <!-- ✅ PARTNER BAR + SOCIAL -->
-  <section class="shibe-footer">
-    <div class="marquee-logos">
-      <div class="logo-wrap">
-        <img src="https://s2.coinmarketcap.com/static/cloud/img/coinmarketcap_white_1.svg" alt="CoinMarketCap" height="28" />
-        <img src="https://assets.coingecko.com/markets/images/1/small/coingecko.png" alt="CoinGecko" height="28" />
-        <span>• DexTools • Uniswap • SushiSwap • PancakeSwap • Raydium • DODO</span>
-      </div>
-    </div>
-    <div class="social-icons">
-      <a href="https://x.com/shibe" target="_blank" title="X">X</a>
-      <a href="https://t.me/shibe" target="_blank" title="Telegram">Telegram</a>
-      <a href="https://discord.gg/shibe" target="_blank" title="Discord">Discord</a>
-      <a href="https://reddit.com/r/shibe" target="_blank" title="Reddit">Reddit</a>
-      <a href="https://tiktok.com/@shibe" target="_blank" title="TikTok">TikTok</a>
-      <a href="https://youtube.com/@shibe" target="_blank" title="YouTube">YouTube</a>
-      <a href="https://facebook.com/shibe" target="_blank" title="Facebook">Facebook</a>
-    </div>
   </section>
 
   <footer>
-    © 2049 SHIBE DAO. Memes are memories.
+    Inspired by Meme Culture | Partners: CoinMarketCap, CoinGecko, Uniswap, PancakeSwap, DEXTools<br>
+    Connect: X, Telegram, Discord, TikTok, YouTube, Facebook.<br>
+    © 2049 SHIBE DAO
   </footer>
 
   <script>
