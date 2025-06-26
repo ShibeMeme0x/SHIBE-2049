@@ -1,123 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SHIBE 2049 | The Last Meme You’ll Ever Feel</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <title>SHIBE MEME 2049</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
   <style>
-    body {
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
       font-family: 'Inter', sans-serif;
-      background: #0d0d0d;
-      color: #fff;
+    }
+
+    body {
+      background: #0f0f0f;
+      color: #f1f1f1;
       text-align: center;
+      padding: 2rem 1rem;
     }
 
-    header {
-      padding: 4rem 1rem 2rem;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
+    h1, h2 {
       color: #f2c744;
     }
 
-    .gallery {
+    .btn-group {
+      margin: 1.5rem auto;
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
       gap: 1rem;
-      margin: 2rem auto;
-      max-width: 960px;
     }
 
-    .gallery img {
-      width: 180px;
+    .btn-group button {
+      background: #f2c744;
+      border: none;
+      padding: 0.8rem 1.6rem;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .btn-group button:hover {
+      background: #e0b832;
+    }
+
+    .meme-slider {
+      display: flex;
+      overflow-x: auto;
+      gap: 1rem;
+      padding: 1rem;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .meme-slider img {
+      height: 140px;
       border-radius: 12px;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s;
     }
 
-    .story {
+    .meme-slider img:hover {
+      transform: scale(1.08);
+    }
+
+    .section {
       max-width: 800px;
-      margin: 3rem auto;
-      padding: 0 1rem;
-      line-height: 1.7;
-      color: #ccc;
+      margin: 2rem auto;
       text-align: left;
+      line-height: 1.8;
     }
 
-    .partners {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin: 3rem 0;
-      flex-wrap: wrap;
+    .section h2 {
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
     }
 
-    .partners img {
-      height: 40px;
-      opacity: 0.8;
-    }
-
-    .socials {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-bottom: 3rem;
-    }
-
-    .socials img {
-      width: 32px;
-      height: 32px;
-      opacity: 0.9;
+    ul {
+      padding-left: 1.2rem;
     }
 
     footer {
-      font-size: 0.85rem;
-      color: #666;
-      margin-bottom: 2rem;
+      margin-top: 4rem;
+      background: #111;
+      padding: 1.5rem;
+      color: #aaa;
+    }
+
+    .social-icons a {
+      margin: 0 6px;
+      text-decoration: none;
+      color: #fff;
+      background: #222;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      font-size: 0.9rem;
     }
   </style>
 </head>
+
 <body>
-
-  <header>
-    <h1>SHIBE 2049</h1>
-    <p><i>The Last Meme You’ll Ever Feel.</i></p>
-  </header>
-
-  <div class="gallery">
-    <img src="public/assets/publicassetsmeme1.webp" alt="Meme 1" />
-    <img src="public/assets/publicassetsmeme2.webp" alt="Meme 2" />
-    <img src="public/assets/publicassetsmeme3.webp" alt="Meme 3" />
-    <img src="public/assets/publicassetsmeme4.webp" alt="Meme 4" />
-    <img src="public/assets/publicassetsmeme5.webp" alt="Meme 5" />
+  <img src="logo.SHIBE.png" alt="Shibe Logo" style="width: 100px; border-radius: 50%;" />
+  <h1>SHIBE MEME 2049</h1>
+  <div class="btn-group">
+    <button onclick="alert('Minting...')">Mint MemeID</button>
+    <button onclick="connectWallet()">Connect Wallet</button>
   </div>
 
-  <section class="story">
-    <h2>SHIBE Story 2049</h2>
-    <p>[INPUT: FULL SHIBE STORY CONTENT HERE]</p>
-  </section>
-
-  <div class="partners">
-    <img src="public/assets/cmc.svg" alt="CoinMarketCap" />
-    <img src="public/assets/coingecko.svg" alt="CoinGecko" />
+  <div class="meme-slider">
+    <img src="publicassetsmeme1.webp" alt="Meme 1">
+    <img src="publicassetsmeme2.webp" alt="Meme 2">
+    <img src="publicassetsmeme3.webp" alt="Meme 3">
+    <img src="publicassetsmeme4.webp" alt="Meme 4">
+    <img src="publicassetsmeme5.webp" alt="Meme 5">
   </div>
 
-  <div class="socials">
-    <img src="public/assets/x.svg" alt="X" />
-    <img src="public/assets/tiktok.svg" alt="TikTok" />
-    <img src="public/assets/discord.svg" alt="Discord" />
-    <img src="public/assets/youtube.svg" alt="YouTube" />
-    <img src="public/assets/facebook.svg" alt="Facebook" />
+  <div class="section">
+    <h2>1. The Laughless Age</h2>
+    <p>In 2049, no one laughs alone. SHIBE is the rebellion of the last human meme. Memes became tools, SHIBE is soul.</p>
+
+    <h2>2. MemeID: Soul Identity</h2>
+    <p>Each MemeID = a moment you truly felt. It's yours, on-chain — no AI can fake that.</p>
+
+    <h2>3. Tokenomics</h2>
+    <p><b>Total:</b> 4,206,942,006,942,069 | <b>Burned:</b> 89.999%<br>
+      Seed: 2%, IDO: 4%, Private: 2%, Team: 1%, DAO/Airdrop: 1%</p>
+
+    <h2>Inspired by Meme Culture</h2>
+    <ul>
+      <li><a href="https://knowyourmeme.com" target="_blank">Know Your Meme</a></li>
+      <li><a href="https://cheezburger.com" target="_blank">Cheezburger</a></li>
+      <li><a href="https://9gag.com" target="_blank">9GAG</a></li>
+      <li><a href="https://reddit.com/r/memes" target="_blank">Reddit – r/memes</a></li>
+      <li><a href="https://dankland.xyz" target="_blank">Dankland</a></li>
+    </ul>
   </div>
 
   <footer>
-    &copy; 2049 SHIBE. All memes are memories.
+    <div>
+      Connect: <span class="social-icons">
+        <a href="#">X</a>
+        <a href="#">Telegram</a>
+        <a href="#">Discord</a>
+        <a href="#">Reddit</a>
+        <a href="#">TikTok</a>
+        <a href="#">YouTube</a>
+        <a href="#">Facebook</a>
+      </span>
+    </div>
+    <div style="margin-top:1rem; font-size:0.8rem;">
+      Inspired by Meme Culture | Partners: CoinMarketCap, CoinGecko, DexTools | DEX: Uniswap, PancakeSwap, SushiSwap, Raydium
+    </div>
+    <p style="margin-top:1rem">&copy; 2049 SHIBE DAO</p>
   </footer>
 
+  <script>
+    async function connectWallet() {
+      if (window.ethereum) {
+        try {
+          await window.ethereum.request({ method: 'eth_requestAccounts' });
+          alert('Wallet connected!');
+        } catch (err) {
+          alert('Connection rejected.');
+        }
+      } else {
+        alert('MetaMask not detected.');
+      }
+    }
+  </script>
 </body>
+
 </html>
