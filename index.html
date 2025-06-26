@@ -127,3 +127,26 @@
   </footer>
 </body>
 </html>
+<script src="https://cdn.jsdelivr.net/npm/@walletconnect/web3-provider@1.8.0/dist/umd/index.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/web3@1.8.2/dist/web3.min.js"></script>
+<button id="connectBtn" style="position: fixed; top: 20px; right: 20px; padding: 10px 20px; background: #f2c744; color: #000; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; z-index: 9999;">
+  Connect Wallet
+</button>
+<script>
+  const connectBtn = document.getElementById("connectBtn");
+  async function connectWallet() {
+    if (window.ethereum) {
+      try {
+        await window.ethereum.request({ method: "eth_requestAccounts" });
+        const web3 = new Web3(window.ethereum);
+        const accounts = await web3.eth.getAccounts();
+        connectBtn.innerText = "🟢 " + accounts[0].slice(0, 6) + "..." + accounts[0].slice(-4);
+      } catch (err) {
+        alert("Connection rejected.");
+      }
+    } else {
+      alert("MetaMask not found.");
+    }
+  }
+  connectBtn.addEventListener("click", connectWallet);
+</script>
